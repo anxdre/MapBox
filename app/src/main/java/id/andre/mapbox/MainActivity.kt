@@ -16,12 +16,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mv_map.onCreate(savedInstanceState)
-        mv_map.getMapAsync(OnMapReadyCallback { mapboxMap ->
+        mv_map.getMapAsync { mapboxMap ->
             mapboxMap.setStyle(
-                    Style.MAPBOX_STREETS , Style.OnStyleLoaded {
-
-            })
-        })
+                    Style.MAPBOX_STREETS) {
+            }
+        }
 
     }
 
